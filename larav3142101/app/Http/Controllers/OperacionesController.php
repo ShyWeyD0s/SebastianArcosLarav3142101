@@ -25,9 +25,14 @@ class OperacionesController extends Controller
     public function division($num1, $num2)
     {
         if ($num2 == 0) {
-            return "No se puede dividir por cero";
+            return "Error: No se puede dividir por cero.";
         }
         $resultado = $num1 / $num2;
         return "La división de $num1 entre $num2 es: $resultado";
+    } 
+
+    public function formHtml()
+    {
+        return view('formulario');
     }
 }
