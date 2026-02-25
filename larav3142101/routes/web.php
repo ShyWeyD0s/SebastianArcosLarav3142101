@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SumaController;
 use App\Http\Controllers\RestaController;
+use App\Http\Controllers\MultiController;
+use App\Http\Controllers\ResultMultController;
+
 /*
 |--------------------------------------------------------------------------
 | Web rutas
@@ -22,3 +25,7 @@ Route::get('/suma', [SumaController::class, 'SumaHtml']); //Ruta para mostrar el
 Route::post('/submit', [SumaController::class, 'suma']); //Ruta para manejar el envío del formulario
 Route::get('/resta', [RestaController::class, 'RestaHtml']); //Ruta para mostrar el formulario HTML de resta
 Route::post('/restaSubmit', [RestaController::class, 'resta']); //Ruta para manejar el envío del formulario de resta
+Route::get('/multiplicacion', [ResultMultController::class, 'MultiplicacionHtml']); //Ruta para mostrar el formulario HTML de multiplicación
+Route::post('/multsubmit', [ResultMultController::class, 'multiplicacion']); //Ruta para manejar el envío del formulario de multiplicación
+
+// actualizar las columnas de la tabla result_mults para que se guarden los resultados de las multiplicaciones, y asi poder mostrar un historial de las multiplicaciones realizadas en la base de datos

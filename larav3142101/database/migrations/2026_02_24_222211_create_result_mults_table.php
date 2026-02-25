@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('result_mults', function (Blueprint $table) {
             $table->id();
+            $table->integer('num1');
+            $table->integer('num2');
+            $table->integer('result');
             $table->timestamps();
         });
     }
